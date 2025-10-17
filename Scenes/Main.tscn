@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=4 uid="uid://b768eyi8b2hj7"]
+
+[ext_resource type="PackedScene" uid="uid://obdjmn4nwovx" path="res://Player/Player.tscn" id="1_r150o"]
+[ext_resource type="TileSet" uid="uid://dqukaw0oamgka" path="res://Assets/TileSets/new_tile_set.tres" id="2_idj7w"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_idj7w"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kln2b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_idj7w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(516, 337)
+shape = SubResource("WorldBoundaryShape2D_kln2b")
+
+[node name="Player" parent="StaticBody2D" instance=ExtResource("1_r150o")]
+position = Vector2(514, 296)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="StaticBody2D"]
+tile_map_data = PackedByteArray("AAAfABoAAAACAAAAAAAgABoAAAABAAAAAAAhABoAAAABAAAAAAAiABkAAAAAAAEAAAAiABoAAAABAAAAAAAjABkAAAAAAAEAAAAjABoAAAABAAAAAAAkABoAAAABAAAAAAAlABoAAAABAAAAAAAmABoAAAABAAAAAAAnABoAAAABAAAAAAAoABoAAAABAAAAAAApABoAAAABAAAAAAAqABoAAAABAAAAAAArABkAAAABAAEAAAArABoAAAABAAAAAAAsABoAAAABAAAAAAAtABoAAAABAAAAAAAuABoAAAACAAAAAAA=")
+tile_set = ExtResource("2_idj7w")
