@@ -1,0 +1,17 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dqukaw0oamgka"]
+
+[ext_resource type="Texture2D" uid="uid://coj37kvpno5tn" path="res://Assets/Textures/echojump_tileset.png" id="1_drh5w"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgk8m"]
+texture = ExtResource("1_drh5w")
+texture_region_size = Vector2i(13, 13)
+use_texture_padding = false
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+2:0/0 = 0
+1:1/0 = 0
+
+[resource]
+tile_size = Vector2i(13, 13)
+sources/0 = SubResource("TileSetAtlasSource_xgk8m")
