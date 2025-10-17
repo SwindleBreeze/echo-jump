@@ -26,9 +26,10 @@ collision_bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EchoArea"]
 shape = SubResource("CircleShape2D_4ppyw")
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+[node name="EchoParticles" type="GPUParticles2D" parent="."]
 emitting = false
-amount = 5000
+amount = 6000
+lifetime = 2.94
 one_shot = true
 speed_scale = 2.0
 explosiveness = 1.0

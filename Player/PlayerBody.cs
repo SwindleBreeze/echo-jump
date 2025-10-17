@@ -6,6 +6,10 @@ public partial class PlayerBody : CharacterBody2D
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
 
+	// Signals
+	[Signal]
+	public delegate void JumpSignalEventHandler(Vector2 position);
+
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
@@ -20,6 +24,13 @@ public partial class PlayerBody : CharacterBody2D
 		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
+			//EmitSignal(SignalName.JumpSignal);
+		}
+
+		// emit echo on apex of jump
+		if (Velocity.Y < 0 && velocity.Y >= 0)
+		{
+			EmitSignal(SignalName.JumpSignal, GlobalPosition);
 		}
 
 		// Get the input direction and handle the movement/deceleration.
