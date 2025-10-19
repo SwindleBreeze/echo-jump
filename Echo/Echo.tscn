@@ -15,9 +15,7 @@ radial_accel_min = -2.23517e-06
 radial_accel_max = -2.23517e-06
 tangential_accel_min = -2.23517e-06
 tangential_accel_max = -2.23517e-06
-collision_mode = 1
-collision_friction = 0.0
-collision_bounce = 0.0
+collision_mode = 2
 
 [node name="Echo" type="Node2D"]
 

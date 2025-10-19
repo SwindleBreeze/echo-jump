@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b768eyi8b2hj7"]
+[gd_scene load_steps=6 format=3 uid="uid://b768eyi8b2hj7"]
 
 [ext_resource type="Script" uid="uid://cnx2noqf6djcv" path="res://Scenes/Main.cs" id="1_kln2b"]
 [ext_resource type="PackedScene" uid="uid://obdjmn4nwovx" path="res://Player/Player.tscn" id="1_r150o"]
+[ext_resource type="PackedScene" uid="uid://5g1a3foble6h" path="res://Objects/Platform.tscn" id="3_kln2b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_idj7w"]
 
@@ -19,3 +20,6 @@ shape = SubResource("WorldBoundaryShape2D_kln2b")
 
 [node name="Player" parent="." instance=ExtResource("1_r150o")]
 position = Vector2(514, 296)
+
+[node name="Platform" parent="." instance=ExtResource("3_kln2b")]
+position = Vector2(614, 303)

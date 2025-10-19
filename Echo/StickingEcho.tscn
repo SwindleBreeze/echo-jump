@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyn5137bxmw5o"]
+
+[ext_resource type="Script" uid="uid://dxpayowl77rhx" path="res://Echo/StickingEcho.cs" id="1_sqkxv"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_djwxg"]
+size = Vector2(5, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqkxv"]
+size = Vector2(5, 5)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_sqkxv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_djwxg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sqkxv")

@@ -1,5 +1,16 @@
-[gd_scene format=3 uid="uid://5g1a3foble6h"]
+[gd_scene load_steps=3 format=3 uid="uid://5g1a3foble6h"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8dhfd"]
+polygon = PackedVector2Array(-10, -10, -10, 10, 10, 10, 10, -10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eifws"]
 
 [node name="Platform" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="PlatformBody" type="StaticBody2D" parent="."]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="PlatformBody"]
+occluder = SubResource("OccluderPolygon2D_8dhfd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformBody"]
+shape = SubResource("RectangleShape2D_eifws")
